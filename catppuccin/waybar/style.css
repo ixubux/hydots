@@ -1,0 +1,117 @@
+/* Fonts */
+* {
+    font-family: "CaskaydiaMono Nerd Font";
+    font-size: 12;
+}
+
+/* Main Bar */
+window#waybar {
+    background-color: transparent;
+    border-bottom: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    margin: 10px;
+}
+
+/* Workspaces Module */
+#workspaces {
+    margin: 3px 1px 1px 5px;
+    background-color: transparent;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 1px 2px;
+    border-radius: 15px;
+    border: 0px;
+    background-color: #1E1D2D;
+    color: #A4B9EF;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    color: #1E1D2D;
+    background-color: #C6AAE8;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    color: #C6AAE8;
+    background: rgba (0, 0, 0, 0.3);
+    border-color: #A4B9EF;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+}
+
+/* Looks and Stuff (normal edition) */
+#clock,
+#battery,
+#backlight,
+#pulseaudio,
+#tray {
+    padding: 1 8px;
+    margin: 3 0 0 0px;
+    color: #C6AAE8;
+    background-color: rgba (0, 0, 0, 0.3);
+    border-style: solid;
+    border-radius: 14px;
+    border-width: 2px;
+    border-color: #A4B9EF;
+    transition-duration: 0.2s;
+}
+
+#tray {
+    margin-right: 3px; 
+}
+
+/* Looks and stuff (hover edition) */
+#pulseaudio:hover {
+    background-color: #C6AAE8;
+    color: #1B1923;
+    border-style: none;
+}
+
+#backlight:hover {
+    background-color: #C6AAE8;
+    color: #1B1923;
+    border-style: none;
+}
+
+#clock:hover {
+    background-color: #C6AAE8;
+    color: #1B1923;
+    border-style: none;
+}
+
+#battery:hover {
+    background-color: #C6AAE8;
+    color: #1B1923;
+    border-style: none;
+}
+
+#battery.plugged:hover {
+    background-color: #ECBFBD;
+}
+
+#battery.charging:hover {
+    background-color: #C7A0DC;
+}
+
+/* Battery (when charging) */
+#battery.charging, #battery.plugged {
+    color: #1B1923;
+    background-color: #99BD8F;
+    border-style: none;
+}
+
+/* Battery (when critical) */
+#battery.critical:not(.charging) {
+    background-color: #E28C8C;
+    color: #ffffff;
+    border-style: none;
+    animation-duration: 0.5s;
+}
